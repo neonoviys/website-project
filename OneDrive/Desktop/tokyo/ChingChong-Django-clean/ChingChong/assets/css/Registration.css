@@ -1,0 +1,485 @@
+
+
+body {
+
+    background-image: url("../img/Background.png");
+    overflow-wrap: break-word;
+    overflow-x: hidden;
+}
+
+.row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.FormContainer {
+    margin-top: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+    justify-self: center;
+    width: 90%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 600px;
+    text-align: center;
+}
+
+.Mybtn {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.Mybtn:hover {
+    background-color: #0056b3;
+}
+
+.form-footer {
+    margin-top: 10px;
+    justify-self: center;
+}
+
+.form-footer a {
+    text-decoration: none;
+}
+
+.Myp {
+    margin: 0;
+    justify-self: end;
+}
+
+.WhyPadding {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.ForLabel {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.FontLabel {
+    font-weight: 600;
+}
+
+@media (max-width: 599.2px) {
+    .col-6 {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 540px) {
+    #password {
+        width: calc(100vw - 170px) !important;
+    }
+
+    #ConfirmPassword {
+        width: calc(100vw - 170px) !important;
+    }
+}
+
+
+
+
+
+.Text {
+    color: white;
+}
+
+/* Перекидываю стили из мэйна для формы */
+.badcol {
+    padding: 0px !important;
+    display: flex !important;
+
+}
+
+.container-fluid {
+    padding: 0px !important;
+    flex-wrap: nowrap !important;
+}
+
+.form-container-authorization {
+    display: none;
+    position: fixed;
+    width: 77vw;
+    max-width: 500px;
+
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: rgb(18, 16, 16);
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+}
+
+.form-container-authorization.active {
+    display: block;
+}
+
+@media (max-width: 290px) {
+    .form-container-authorization {
+        width: 88vw;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    a {
+        font-size: 14px;
+    }
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.overlay.active {
+    display: block;
+}
+
+.BigButton {
+    width: 15vw;
+    min-width: 120px;
+    height: 10vh;
+    font-size: 24px;
+    background-color: rgba(33, 37, 41, 1);
+    color: white;
+}
+
+.BottomText {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 10px;
+    padding-right: 5px;
+    width: 97%;
+    align-items: end;
+}
+
+.TextSprava {
+    text-align: right;
+    color: white;
+    width: 50% !important;
+
+}
+
+
+.TextSleva {
+    text-align: left;
+    color: white;
+    width: 50% !important;
+    padding-left: 0 !important;
+
+}
+
+.WithoutUnderline {
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+/* Добавляю понельку с несколькими кнопками */
+.BeforeKnopka{
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+    .BeforeKnopka {
+        display: none !important;
+    }
+
+    .Knopka {
+        display: flex !important;
+        /* Вот это чтобы справа было */
+        justify-content: end;
+    }
+
+    .btn {
+        text-align: end !important;
+        padding: 0 !important;
+    }
+
+    #password {
+        width: 80%;
+    }
+    
+    #ConfirmPassword {
+        width: 80%;
+    }
+
+    .password-container {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .password-container2 {
+        display: flex;
+        justify-content: space-around;
+    }
+
+}
+
+.MenuTable a{
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px;
+    background-color: black;
+}
+
+.GoToMain {
+    inline-size: 6vh;
+    border: 1px solid;
+    border-color: black;
+    border-radius: 50%;
+    background-color: white;
+    margin-left: 10px;
+}
+
+.GoToMenu {
+    color: black;
+    text-decoration: none;
+}
+
+.GoToTeam {
+    color: black;
+    text-decoration: none;
+}
+
+.GoToPosts {
+    color: black;
+    text-decoration: none;
+}
+
+.GoToSelfPosts {
+    color: black;
+    text-decoration: none;
+}
+
+.Knopka {
+    display: none;
+}
+
+.MenuKnopka {
+    inline-size: 45%;
+    margin-right: 5px;
+}
+
+.dropdown-toggle::after {
+    border-left: 0px !important; 
+    border-right: 0px !important;
+    margin-left: 0px !important;
+}
+
+header {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(32, 32, 32);
+}
+
+hr {
+    margin-top: 6px !important;
+    margin-bottom: 6px !important;
+}
+
+
+
+
+/* добавляю в панельку кнопки */
+#loginButton {
+    background-color: black;
+    margin-right: 10px;
+    margin-left: 20px;
+    color: white;
+}
+
+#logoutButton {
+    margin-left: 20px;
+    margin-right: 10px;
+    background-color: black;
+    color: white;
+}
+
+.Panel {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ImgIcon {
+    inline-size: 8vh;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+.button-container {
+    display: flex; /* Для выравнивания кнопок */
+    align-items: center; /* Вертикальное выравнивание */
+}
+
+.hidden {
+    display: none;
+}
+
+.password-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.password-container2 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.LeftPadding {
+    padding-left: 0 !important;
+}
+
+
+
+
+/* ошибка */
+#message3 {
+    position: absolute; /* Абсолютное позиционирование */
+    top: 100%; /* Размещаем под полем ввода */
+    left: 0; /* Выравниваем по левому краю */
+    z-index: 10; /* Убедимся, что сообщение поверх других элементов */
+    background: white; /* Фон сообщения */
+    padding: 5px; /* Отступы внутри сообщения */
+    border: 1px solid transparent; /* Рамка (прозрачная по умолчанию) */
+    border-radius: 4px; /* Скруглённые углы */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для выделения */
+    margin-top: 5px; /* Отступ от поля ввода */
+    display: none; /* По умолчанию скрыто */
+}
+
+#message3.error {
+    border-color: red; /* Красная рамка для ошибки */
+    color: red; /* Красный текст для ошибки */
+
+}
+
+#message3.success {
+    border-color: green; /* Зелёная рамка для успеха */
+    color: green; /* Зелёный текст для успеха */
+
+}
+
+#message2 {
+    position: absolute; /* Абсолютное позиционирование */
+    top: 100%; /* Размещаем под полем ввода */
+    left: 0; /* Выравниваем по левому краю */
+    z-index: 10; /* Убедимся, что сообщение поверх других элементов */
+    background: white; /* Фон сообщения */
+    padding: 5px; /* Отступы внутри сообщения */
+    border: 1px solid transparent; /* Рамка (прозрачная по умолчанию) */
+    border-radius: 4px; /* Скруглённые углы */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для выделения */
+    margin-top: 5px; /* Отступ от поля ввода */
+    display: none; /* По умолчанию скрыто */
+}
+
+#message2.error {
+    border-color: red; /* Красная рамка для ошибки */
+    color: red; /* Красный текст для ошибки */
+
+}
+
+#message2.success {
+    border-color: green; /* Зелёная рамка для успеха */
+    color: green; /* Зелёный текст для успеха */
+
+}
+
+#message {
+    position: absolute; /* Абсолютное позиционирование */
+    top: 100%; /* Размещаем под полем ввода */
+    left: 0; /* Выравниваем по левому краю */
+    z-index: 10; /* Убедимся, что сообщение поверх других элементов */
+    background: white; /* Фон сообщения */
+    padding: 5px; /* Отступы внутри сообщения */
+    border: 1px solid transparent; /* Рамка (прозрачная по умолчанию) */
+    border-radius: 4px; /* Скруглённые углы */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для выделения */
+    margin-top: 5px; /* Отступ от поля ввода */
+    display: none; /* По умолчанию скрыто */
+}
+
+#message.error {
+    border-color: red; /* Красная рамка для ошибки */
+    color: red; /* Красный текст для ошибки */
+
+}
+
+#message.success {
+    border-color: green; /* Зелёная рамка для успеха */
+    color: green; /* Зелёный текст для успеха */
+
+}
+
+#password-error {
+    position: absolute; /* Абсолютное позиционирование */
+    top: 100%; /* Размещаем под полем ввода */
+    left: 0; /* Выравниваем по левому краю */
+    z-index: 10; /* Убедимся, что сообщение поверх других элементов */
+    background: white; /* Фон сообщения */
+    padding: 5px; /* Отступы внутри сообщения */
+    border: 1px solid transparent; /* Рамка (прозрачная по умолчанию) */
+    border-radius: 4px; /* Скруглённые углы */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для выделения */
+    margin-top: 5px; /* Отступ от поля ввода */
+    display: none; /* По умолчанию скрыто */
+}
+
+.error-message {
+    border-color: red !important;  /* Красная рамка для ошибки */
+    color: red; /* Красный текст для ошибки */
+}
+
+#password-error2 {
+    position: absolute; /* Абсолютное позиционирование */
+    top: 100%; /* Размещаем под полем ввода */
+    left: 0; /* Выравниваем по левому краю */
+    z-index: 10; /* Убедимся, что сообщение поверх других элементов */
+    background: white; /* Фон сообщения */
+    padding: 5px; /* Отступы внутри сообщения */
+    border: 1px solid transparent; /* Рамка (прозрачная по умолчанию) */
+    border-radius: 4px; /* Скруглённые углы */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для выделения */
+    margin-top: 5px; /* Отступ от поля ввода */
+    display: none; /* По умолчанию скрыто */
+}
+
+.error-message2 {
+    border-color: red !important;  /* Красная рамка для ошибки */
+    color: red; /* Красный текст для ошибки */
+}

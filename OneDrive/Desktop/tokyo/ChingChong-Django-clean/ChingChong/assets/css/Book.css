@@ -1,0 +1,340 @@
+body {
+    background-image: url("../img/Background.png");
+
+    margin: 0px;
+    overflow-wrap: break-word;
+    overflow-x: hidden;
+}
+
+
+footer  {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: end;
+    color: rgb(200, 196, 196);
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.review {
+    display: flex;
+    justify-content: center;
+    overflow-wrap: break-word;
+    overflow-x: hidden;
+    padding-bottom: 10px;
+}
+
+.ReviewForm {
+    width: 50%;
+    text-align: center;
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.ForLabel {
+    margin-top: 10px !important;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.Mybtn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.Mybtn:hover {
+    background-color: #0056b3;
+}
+
+.row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.WhyPadding {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+@media (min-width: 560px) and (max-width: 900px) {
+    .ReviewForm {
+        width: 70%;
+    }
+}
+
+@media (max-width: 560px) {
+    .ReviewForm {
+        width: calc(100vw - 100px);
+    }
+}
+
+@media (max-height: 625px) {
+    footer {
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 360px) {
+    .ReviewForm {
+        width: calc(100vw - 40px);
+    }
+}
+
+
+
+
+
+
+
+
+
+.Text {
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Перекидываю стили из мэйна для формы */
+.badcol {
+    padding: 0px !important;
+    display: flex !important;
+
+}
+
+.container-fluid {
+    padding: 0px !important;
+    flex-wrap: nowrap !important;
+}
+
+.form-container-authorization {
+    display: none;
+    position: fixed;
+    width: 77vw;
+    max-width: 500px;
+
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: rgb(18, 16, 16);
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+}
+
+.form-container-authorization.active {
+    display: block;
+}
+
+@media (max-width: 290px) {
+    .form-container-authorization {
+        width: 88vw;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    a {
+        font-size: 14px;
+    }
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.overlay.active {
+    display: block;
+}
+
+.BigButton {
+    width: 15vw;
+    min-width: 120px;
+    height: 10vh;
+    font-size: 24px;
+    background-color: rgba(33, 37, 41, 1);
+    color: white;
+}
+
+.BottomText {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 10px;
+    padding-right: 5px;
+    width: 97%;
+}
+
+.TextSprava {
+    text-align: right;
+    padding: 0 12px 0 0;
+    color: white;
+    align-self: end;
+}
+
+
+.TextSleva {
+    text-align: left;
+    color: white;
+    padding: 0 12px 0 0 !important;
+    align-content: end;
+}
+
+.WithoutUnderline {
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+/* Добавляю понельку с несколькими кнопками */
+.BeforeKnopka{
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+    .BeforeKnopka {
+        display: none !important;
+    }
+
+    .Knopka {
+        display: flex !important;
+        /* Вот это чтобы справа было */
+        justify-content: end;
+    }
+
+    .btn {
+        text-align: end !important;
+        padding: 0 !important;
+    }
+
+}
+
+.MenuTable a{
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px;
+    background-color: black;
+}
+
+.GoToMain {
+    inline-size: 6vh;
+    border: 1px solid;
+    border-color: black;
+    border-radius: 50%;
+    background-color: white;
+    margin-left: 10px;
+}
+
+.GoToMenu {
+    color: black;
+    text-decoration: none;
+}
+
+.GoToTeam {
+    color: black;
+    text-decoration: none;
+}
+
+.GoToPosts {
+    color: black;
+    text-decoration: none;
+}
+
+.GoToSelfPosts {
+    color: black;
+    text-decoration: none;
+}
+
+.Knopka {
+    display: none;
+}
+
+.MenuKnopka {
+    inline-size: 45%;
+    margin-right: 5px;
+}
+
+.dropdown-toggle::after {
+    border-left: 0px !important; 
+    border-right: 0px !important;
+    margin-left: 0px !important;
+}
+
+header {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(32, 32, 32);
+}
+
+hr {
+    margin-top: 6px !important;
+    margin-bottom: 6px !important;
+}
+
+
+
+
+/* добавляю в панельку кнопки */
+#loginButton {
+    background-color: black;
+    margin-right: 10px;
+    margin-left: 20px;
+    color: white;
+}
+
+#logoutButton {
+    margin-left: 20px;
+    margin-right: 10px;
+    background-color: black;
+    color: white;
+}
+
+.Panel {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ImgIcon {
+    inline-size: 8vh;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+.button-container {
+    display: flex; /* Для выравнивания кнопок */
+    align-items: center; /* Вертикальное выравнивание */
+}
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,75 @@
+{% load static %}
+{% load custom_filters %}
+{% for post in posts %}
+<div class="row OnePostContent">
+  <div class="col OnePostBack">
+   {% if perms.posts.change_post %}
+   <button class="ButtonSetting">
+     <a href="{% url 'admin:posts_post_change' post.pk %}"><img class="SettingIcon" src="{% static 'img/Шестерёнка.png' %}"/></a>
+   </button>
+   {% endif %}
+    <h2 class="PersonName">
+    Пользователь: <a href={% url 'profile'%}{{post.sender.username}} style="text-decoration: none; color: black;">
+      {{post.sender.username}}
+    </a>
+   </h2>
+   <div class="row">
+    <div class="col-3 MyCity">
+     <p>
+      Город: {{post.restaurant.adress|default:"--------"}}
+     </p>
+    </div>
+    <div class="col-3 rating">
+     <p>
+      Рейтинг: {{post.get_rating_display}}
+     </p>
+    </div>
+   </div>
+   <p class="review">
+    {{post.review}}
+   </p>
+   <div class="row LikesAndDislikes">
+    <div class="col Likes">
+     <div class="row">
+      <div class="col-6 text-center">
+       <p class="LikesAmount p1">
+        Лайков:
+       </p>
+       <p class="amountL p1">
+         {{post.postinfo_set.all|count_rating:1}}
+       </p>
+      </div>
+      <div class="col-6 ForIcona">
+       {% if user.is_authenticated %}
+       <a class="btn Icona">
+        <img class="LikeIcon" data-pressed="{{post.postinfo_set.all|has_liked:user}}" data-post-id="{{post.pk}}" src="{% static 'img/like.png' %}"/>
+       </a>
+       {% endif %}
+      </div>
+     </div>
+    </div>
+    <div class="col Dislikes">
+     <div class="row">
+      <div class="col-6 text-center">
+       <p class="DislikesAmount p1">
+        Дизлайков:
+       </p>
+       <p class="amountD p1">
+         {{post.postinfo_set.all|count_rating:-1}}
+       </p>
+      </div>
+      <!-- <div class="col ForIcona"><button class="Icona"><img class="DislikeIcon" src="img/Дизлайк.png"></button></div> -->
+      <div class="col-6 ForIcona">
+       {% if user.is_authenticated %}
+       <a class="btn Icona">
+        <img class="DislikeIcon" data-pressed="{{post.postinfo_set.all|has_disliked:user}}" data-post-id="{{post.pk}}" src="{% static 'img/dislike.png' %}"/>
+       </a>
+        {% endif %}
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+  {% endfor %}
