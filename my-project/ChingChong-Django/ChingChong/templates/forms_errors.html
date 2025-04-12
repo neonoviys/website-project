@@ -1,0 +1,13 @@
+{% comment %} Небольшой сниппет для вывода ошибок из формы. !!Обязательно форма должна называться form!! {% endcomment %}
+{% if form.errors %}
+    <div class="alert alert-warning" role="alert">
+        {% for field in form %}
+            {% if field.errors %}
+                {% for error in field.errors %}
+                    <p>{{error}}</p>
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+        {{form.non_field_errors}}
+    </div>
+{% endif %}
